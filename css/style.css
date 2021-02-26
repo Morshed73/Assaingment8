@@ -92,19 +92,26 @@ ul{
     position: absolute;
     z-index: -1;
 }
-.effect-wrap .effec-1{
+.effect-wrap .effect-1{
     left: 20%;
     top: 20%;
     font-size: 20px;
-    color: rgba(225, 225, 225, 0.5);
+    color: var(--color-2);
     animation: spin_01 7s linear infinite ;
 }
-.effect-wrap .effec-2{
+.effect-wrap .effect-2{
     right: 5%;
     top: 10%;
     font-size: 25px;
-    color: var(--color-2);
+    color: rgba(225, 225, 225, 0.5);
     animation: spin_01 5s linear infinite ;
+}
+.effect-wrap .effect-3{
+    left: 5%;
+    bottom: 10%;
+    font-size: 25px;
+    color: var(--color-3);
+    animation: bounceTop_01 3s linear infinite ;
 }
 .section-padding{
     padding: 80px 0;
@@ -140,8 +147,14 @@ ul{
 }
 /* Navbar */
 .navbar{
-    background-color: var(--main-color);
+    background-color: transparent;
     padding: 20px 0;
+    transition: all 0.5s ease;
+}
+.navbar .navbar-shrink{
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    background-color: var(--main-color);
+    padding: 10px 0;
 }
 .navbar > .container{
     padding: 0 15px;
@@ -174,7 +187,9 @@ ul{
     transition: all 0.5s ease;
     transform: scale(0);
 }
-.navbar .nav-item .nav-link.active::before
+.navbar .nav-item .nav-link.active::before{
+
+}
 .navbar .nav-item .nav-link:hover::before{
     transform: scale(1);
 }
@@ -202,26 +217,27 @@ ul{
 .home .home-btn{
     margin-top: 40px;
 }
+.home .home-btn .video-play-btn{
+    margin-left: 30px;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    font-size: 16px;
+    animation: pulse_01 2s ease infinite;
+}
+.home .home-btn .video-play-btn i{
+    line-height: 50px;
+}
+.home .home-btn .video-play-btn:hover{
+    animation: none;
+    box-shadow: var(--shadow-black-300);
+}
 .home-img img{
     max-width: 250px;
     width: 100%;
     box-shadow: var(--shadow-black-100);
     border-radius: 32px;
     animation: bouncetop_01 3s ease infinite;
-}
-.home-img img .video-play-btn{
-    margin-left: 30px;
-    height: 50px;
-    width: 50px;
-    font-size: 16px;
-    animation: pulse_01 2s ease infinite;
-}
-.home-img img .video-play-btn:hover{
-    animation: none;
-    box-shadow: var(--shadow-black-300);
-}
-.home-img img .video-play-btn i{
-    line-height: 50px;
 }
 .home-img{
     position: relative;
@@ -398,4 +414,10 @@ ul{
 }
 .fun-fact-item.style-4{
     background-color: var(--main-color);
+}
+
+/* App Screenshorts Section */
+.Screenshorts-item{
+    max-width: 250px;
+    width: 100%;
 }
