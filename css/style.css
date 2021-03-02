@@ -784,7 +784,7 @@ ul{
     font-size: 18px;
     font-weight: 400;
     margin: 0 0 10px;
-    color: var(--balck-900)
+    color: var(--balck-900);
 }
 .contact-info-item p{
     font-size: 16px;
@@ -814,6 +814,7 @@ ul{
 .contact-form .form-control:focus{
     border-color: var(--main-color);
 }
+
 /* Footer */
 .footer{
     background-color: var(--main-color);
